@@ -59,10 +59,12 @@ steps
  agent { label 'k83_node' }
 
  steps
- {
-  sh 'kubectl apply -f k83_deployment.yaml'
-  sh 'kubectl apply -f 	k83_service.yaml'
- }
+ { 
+ // sh 'kubectl apply -f k83_deployment.yaml'
+ // sh 'kubectl apply -f k83_service.yaml'
+
+ sh 'ansible-playbook ansible_deploymentonk83.yaml'
+ } 
 }
   }
 } 

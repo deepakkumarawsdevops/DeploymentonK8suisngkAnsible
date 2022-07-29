@@ -1,0 +1,9 @@
+---
+- name : Build docker image
+  hosts : localhost
+  become : yes
+  tasks:
+  - name : Build docker image using dockerfile
+    command : docker build -t deepakkumarawsdevops/k83image:1 .
+
+...       

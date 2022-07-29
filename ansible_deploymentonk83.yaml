@@ -1,1 +1,13 @@
+---
+- name : deploy docker image on k8s cluster
+  hosts : node2
+  become : yes
+  tasks :
+  - name : create a deploymenet
+     command : kubectl apply -f k83_deployment.yaml
+  - name : create a service
+     command : kubectl apply -f k83_service.yaml
+...       
+      
+
 
